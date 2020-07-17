@@ -293,3 +293,11 @@ TWEET
 ```
 
 Yes overriding is not limited to methods in some languages.  We can also override properties. <!-- .element class="fragment" -->
+
+
+
+### And that's the glimpse of the 3 pillars of OOP
+
+![pillars](images/pillars.jpeg)
+
+Next topic is the rightmost pillar on steroids! 😁
