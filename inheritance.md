@@ -111,7 +111,7 @@ has-a (composition) will be the next next topic
 
 ### The _is-a_ test (3/3)
 
-Roses are red, violets are blue.
+Roses are red, violets are blue.  
 Mango is a fruit, but the reverse ain't true.
 
 * `class Animal extends Dog`
