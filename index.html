@@ -21,23 +21,35 @@
 
       code {
         font-family: 'IBM Plex Mono', monospace !important;
-      }
+			}
+			
+			.course-code {
+				border-radius: 16px 0px 0px 16px; 
+				background-color: #3e2b72;
+				padding: 4px 8px 4px 8px;
+				color: #f4cb3d;
+				box-shadow: 4px 4px 8px -2px gray;
+			}
+
+			.course-title {
+				margin-left: -8px;
+				border-left: 0px;
+				text-transform: none;
+				padding: 4px 8px;
+				border-radius: 0px 16px 16px 0px;
+				color: #3e2b72;
+				background-color: #f4cb3d;
+				box-shadow: 0px 4px 8px -2px gray;
+			}
     </style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-        <section>
-          <h1>Inheritance and Polymorphism</h1>
-				</section>
-				
 				<section data-markdown="intro.md" data-separator-vertical="\n\n\n"></section>				
 				<section data-markdown="inheritance.md" data-separator-vertical="\n\n\n"></section>				
 				<section data-markdown="polymorphism.md" data-separator-vertical="\n\n\n"></section>				
-
-				<section>
-					<h2>&& that's it for Inheritance and Polymorphism!</h2>
-				</section>
+				<section data-markdown="outro.md" data-separator-vertical="\n\n\n"></section>
 			</div>
     </div>		    
 
@@ -65,5 +77,3 @@
 		</script>
 	</body>
 </html>
-
-<!-- it's not updating gh-pages i dunno why -->
