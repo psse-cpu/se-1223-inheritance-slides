@@ -103,7 +103,7 @@ Can you find ways this solution could quickly unravel? <!-- .element class="frag
 
 ### They're all animals (the mess)
 
-```dart  [3-4 | 12-13 | 15-21 | 23-29 | 31-41]
+```dart  [3-4 | 12-15 | 17-23 | 25-31 | 33-43]
 class Animal {
   String species;
   int _lives; // only applies to cats
@@ -115,7 +115,9 @@ class Animal {
     print('Inhale exhale!');
   }
 
-  set lives(int lives) => _lives = species == 'cat' ? lives : 1;
+  set lives(int lives) {
+    _lives = species == 'cat' ? lives : 1;
+  }
   int get lives => _lives;
 
   void kick() {
