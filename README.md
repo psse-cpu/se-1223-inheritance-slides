@@ -23,6 +23,10 @@ Want to create your presentation using a visual editor? Try the official reveal.
 
 ## License
 
-MIT licensed
+Reveal.js is under MIT licensed
 
 Copyright (C) 2011-2020 Hakim El Hattab, https://hakim.se
+
+The slides are under [CC BY-SA 4.0](https://choosealicense.com/licenses/cc-by-sa-4.0/#).
+
+Copyright (C) 2020 Richard Michael Coo
