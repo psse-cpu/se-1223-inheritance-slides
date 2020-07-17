@@ -266,7 +266,7 @@ class Dog extends Animal {
 // main.dart
 final doggo = Dog();
 doggo.jump(35); // an OK jump
-doggo.jump(51); // too high, doggie brones broke
+doggo.jump(51); // too high, doge bonez broke
 horse.jump(100); // inherited from Animal
 cat.jump(999); // always lands on 2 feet
 ```
@@ -378,7 +378,7 @@ class Dog extends Animal {
 
 // main.dart
 final dog = Dog();
-dog.breathe(); // NOT misspelled
+dog.breathe();
 ```
 
 <div style="display: flex; align-items: center;">
