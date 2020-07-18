@@ -34,6 +34,8 @@ Animal creature = Lizard(); // error, Lizard IS NOT AN animal
 Be careful of Dart's type inference
 
 ```dart
+class Lizard extends Animal {}
+
 var animal = Lizard(); // type is inferred to be Lizard
 animal = Dog(); // can't assign Dog to a Lizard variable
 ```
@@ -277,7 +279,7 @@ void vaccinate(Animal animal, String vaccine) {
 void main() {
   vaccinate(Dog(), 'anti-rabies');
   vaccinate(Cat(), 'anti-rabies');
-  vaccinate(Bird(false), 'bird flu');
+  vaccinate(Bird(), 'bird flu');
 }
 
 /*

@@ -136,7 +136,7 @@ Answer true if the inheritance is OK.
 ### Your turn (2/2)
 
 * Name 2 possible subclasses for each of these:
-  - do it on [this Canvas discussion](https://psse-cpu.github.io/se-1223-inheritance-slides/#/2/9)
+  - do it on [this Canvas discussion](https://canvas.instructure.com/courses/2109863/discussion_topics/9367358)
     + musical instrument
     + house
     + doctor
@@ -169,7 +169,7 @@ class Cat extends Animal {
   int _lives;
 
   set lives(int lives) {
-    _lives = species == 'cat' ? lives : 1;
+    _lives = lives &lt;= 9 ? lives : 1;
   }
   int get lives => _lives;
 
@@ -225,8 +225,8 @@ Horse().breathe(); // Yi fufufufufu
 
 ### Method overriding
 
-Method overriding, in object-oriented programming, is a language feature that allows a subclass or 
-to provide a specific implementation of a method that is already provided by its superclass.
+Method overriding, in object-oriented programming, is a language feature that allows a subclass to 
+provide a specific implementation of a method that is already provided by its superclass.
 
 * it can be totally different
   - Inhale, exhale!
