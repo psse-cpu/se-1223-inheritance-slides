@@ -169,9 +169,8 @@ Answer and explain in this [Canvas discussion](https://canvas.instructure.com/co
 
 Polymorphism allows you to loop over objects:
 
-```dart [1-11 | 13-18 | 20-26 | 28-40 | 42-45 | 48 | 51-63]
+```dart [1-10 | 12-17 | 19-25 | 27-39 | 41-44 | 47 | 50-62]
 class Animal {
-  @override
   void breathe() {
     print('Inhale, exhale!');
   }
@@ -240,9 +239,8 @@ void main() {
 
 ### Or other interesting things...
 
-```dart [1-12 | 14-16 | 18-20 | 22-24 | 26-28 | 30-34 | 37-39 | 43-50]
+```dart [1-11 | 13-15 | 17-19 | 21-23 | 25-27 | 29-33 | 36-38 | 42-49]
 class Animal {
-  @override
   void breathe() {
     print('Inhale, exhale!');
   }
