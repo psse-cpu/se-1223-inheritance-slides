@@ -31,14 +31,14 @@ Inheritance and Polymorphism
 
 * inheritance
   - _is-a_ test
-  - _is-a_ vs _has-a_
   - method overriding
-  - reusing superclass 
-  - `@override` annotation
-* polymorphism
-  - substituting superclass instances
-  - avoiding bad type inference
-  - overrides for other member types
+* basic polymorphism
+* advanced polymorphism
+  - abstract classes and methods
+  - interfaces
+* OOP principles for polymorphism
+  - Open-Closed Principle (OCP)
+  - Program to an interface, not an implementation
 
 
 
