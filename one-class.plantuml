@@ -1,10 +1,6 @@
-@startuml "One Class"
-
-class Animal {
-  + scientificName: String
-  - _oxygenLevel: int
-  - _regenerate() : void
-  + eat(food: String): void
-  + reproduce(mate: Animal): Animal[]
+@startuml "italics"
+abstract class Animal {
+  + {abstract} eat(food: String): void
+  + breathe(): void
 }
 @enduml

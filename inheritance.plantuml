@@ -1,35 +1,28 @@
 @startuml "inheritance"
-class Animal {
-  + scientificName: String
-  + sound: String {readOnly}
-  - _oxygenLevel: int
-
-  + breathe(): void
-  + eat(food: String): void
-  + makeSound(): void
-  + reproduce(mate: Animal): Animal[]
+abstract class Doctor {
+  {abstract} diagnose(): void
 }
 
-note right of Animal: I am a note: {readOnly} means final\n 
-note bottom of Animal: [] means array / list
-
-class Dog {
-  + missesOwner: bool
-
-  + wagTail(): void
+class Neurologist {
+  diagnose(): void()
 }
 
-class Cat {
-  + lives: int
+note left of Neurologist: request nervous system labs
 
-  + climb(): void
+class Ophthalmologist {
+  diagnose(): void()
 }
 
-class Bird {
-  + fly(): void
+note right of Ophthalmologist: request visual acuity test
+
+class NeuroOphthalmologist {
+
 }
 
-Animal <|-- Dog
-Animal <|-- Cat
-Animal <|-- Bird
+note bottom of NeuroOphthalmologist: doesn't override diagnose()\n\n which diagnose() will it inherit?
+
+Doctor <|-- Neurologist
+Doctor <|-- Ophthalmologist
+Neurologist <|-- NeuroOphthalmologist
+Ophthalmologist <|-- NeuroOphthalmologist
 @enduml
