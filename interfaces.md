@@ -10,7 +10,8 @@ Interfaces
   - classes can only extend one superclass, but implement multiple interfaces
   - Dart's interface system is a little unique, but same principle
     + most other strongly-typed languages have an `interface` keyword for this
-    + But in Dart, a class can become an interface when the `implements` keyword is used
+    + But w/ Dart's [implicit interfaces](https://dart.dev/guides/language/language-tour#implicit-interfaces),
+    any class can become an interface when the `implements` keyword is used
     + All methods and properties become abstract
   - Solves the Deadly Diamond of Death problem
 
@@ -135,4 +136,118 @@ false
 I dunno man, chew the apple?
 true
 ah teh nOmz! yummy chimken
+</pre>
+
+
+
+### We don't usually do this though
+
+* Create a 100% abstract class if you intend it to be an interface.
+* Take a look at an interface we will learn later, [`Comparable`](https://github.com/dart-lang/sdk/blob/caebd6700d5ece73b5566b33ff1daecb91dac500/sdk/lib/core/comparable.dart)
+  - Do you see any methods with a body?
+* Or a data structure you will encounter (or might have already encountered)
+  [Map](https://github.com/dart-lang/sdk/blob/caebd6700d5ece73b5566b33ff1daecb91dac500/sdk/lib/core/map.dart)
+* Interfaces are 100% abstract classes
+  - we should (usually) write them that way
+
+
+
+### UML for interface
+
+![interface uml](images/interface-uml.png)
+
+* Note the difference in arrows
+  - extends is a solid line
+  - implements is a dashed-line
+
+
+
+### Abstract classes vs interfaces
+
+* You can Google tons of them
+  - BUT some differences only apply to certain languages
+    + abstract classes can have `protected` methods in Java, but Dart doesn't have `protected`
+    + some languages (like Java again), allow default methods (methods with body) in interfaces
+      (I/Fs) <sup style="color: blue">they have rules to avoid DDD</sup>
+  - but what's common in most langauges are:
+    + can only extend one abstract class, can implement multiple I/Fs
+    + abstract classes for **code reuse** (some methods not abstract)
+    + interfaces if you want classes to play some role _(can-act-as-a)_
+    + interfaces can span multiple inheritance trees
+
+
+  
+### last two bullets, explained in 1 pic
+
+![whistler](images/whistler.png)
+
++ three inheritance hierarchies
+  - Animal, Kitchenware, Firework
+  - Whistler was able to _"penetrate"_ them
+  - Wolf, Cricket, Kettle, WhistleBomb _can-act-as-(a)_ whistlers
+
+
+
+### Convert diagram into code
+
+```dart [1-3 | 5-17 | 19 | 21-29 | 31-39 | 41-52]
+abstract class Whistler {
+  void whistle();
+}
+
+abstract class Animal {}
+
+class Wolf extends Animal implements Whistler {
+  void whistle() {
+    print("Aaaawwwwooooo!");
+  }
+}
+
+class Cricket extends Animal implements Whistler {
+  void whistle() {
+    print("kroo kroo kroo");
+  }
+}
+
+class Snake extends Animal {} // can't whistle
+
+abstract class Kitchenware {}
+
+class FryingPan extends Kitchenware {}
+
+class Kettle extends Kitchenware implements Whistler {
+  void whistle() {
+    print("ppppphhhhheeeewww ang ininit mo!!");
+  }
+}
+
+abstract class Firework {}
+
+class Skyrocket extends Firework {}
+
+class WhistleBomb extends Firework implements Whistler {
+  void whistle() {
+    print('wwwwweeeeeyyyyyyuuuu bbboooommmm!');
+  }
+}
+
+void celebrateNewYear(Whistler noisy) {
+  stdout.write("Goodbye 2020 nga daw jowk!  ");
+  noisy.whistle();
+}
+
+void main() {
+  celebrateNewYear(Wolf());
+  celebrateNewYear(Cricket());
+  celebrateNewYear(Kettle());
+  celebrateNewYear(WhistleBomb());
+  celebrateNewYear(Snake()); // ❌ Snake is not a Whister
+}
+```
+
+<pre>
+Goodbye 2020 nga daw jowk!  Aaaawwwwooooo!
+Goodbye 2020 nga daw jowk!  kroo kroo kroo
+Goodbye 2020 nga daw jowk!  ppppphhhhheeeewww ang ininit mo!!
+Goodbye 2020 nga daw jowk!  wwwwweeeeeyyyyyyuuuu bbboooommmm!
 </pre>
