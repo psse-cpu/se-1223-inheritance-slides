@@ -143,7 +143,7 @@ ah teh nOmz! yummy chimken
 ### We don't usually do this though
 
 * Create a 100% abstract class if you intend it to be an interface.
-* Take a look at an interface we will learn in Problem Set 02c, [`Comparable`](https://github.com/dart-lang/sdk/blob/caebd6700d5ece73b5566b33ff1daecb91dac500/sdk/lib/core/comparable.dart)
+* Take a look at an interface we will learn in Problem Set 02b, [`Comparable`](https://github.com/dart-lang/sdk/blob/caebd6700d5ece73b5566b33ff1daecb91dac500/sdk/lib/core/comparable.dart)
   - Do you see any methods with a body?
 * Or a data structure you will encounter (or might have already encountered)
   [Map](https://github.com/dart-lang/sdk/blob/caebd6700d5ece73b5566b33ff1daecb91dac500/sdk/lib/core/map.dart)
