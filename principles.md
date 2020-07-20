@@ -112,4 +112,4 @@ We've discussed the first one last topic: SRP
   anything would do.
 * Don't use my examples above. 😈😈😈
   - unless your creative juices have ran out
-* Share about it in this Canvas discussion.
+* Share about it in this [Canvas discussion](https://canvas.instructure.com/courses/2109863/discussion_topics/9381740).
