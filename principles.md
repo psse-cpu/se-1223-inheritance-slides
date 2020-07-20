@@ -17,7 +17,7 @@ OOP Principles, Again
     * credit / debit cards
     * ShopeePay, Shopee Coins
     * GCash, Paymaya, GrabPay
-    * other future ways to login we haven't discovered
+    * other future ways to pay we haven't discovered
 
 
 

@@ -188,7 +188,7 @@ class Cat extends Animal {
 
 // main.dart
 final animal = Animal(); // ERROR, can't instantiate
-var cutie = Dog();
+Animal cutie = Dog();
 cutie.eat('chimken');
 cutie = Cat();
 cutie.eat('toona');

@@ -35,7 +35,7 @@ Interfaces
 ### Interfaces are 100% abstract classes
 
 * Again, all methods and properties become abstract
-  * All classes ~~canbecome~~ are also interfaces in Dart, just use `implements`, and not `extends`
+  * All classes ~~can become~~ are also interfaces in Dart, just use `implements`, and not `extends`
 * Classes implementing interfaces **inherit nothing**
   - since they're 100% abstract, there's no code to _"copy"_
 * If `Neurologist` and `Ophthalmologist` had abstract `diagnose()` methods
